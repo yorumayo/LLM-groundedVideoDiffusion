@@ -36,6 +36,7 @@ def init(base_model):
     pipe.scheduler = DPMSolverMultistepScheduler.from_config(pipe.scheduler.config)
     pipe.to("cuda")
     pipe.enable_vae_slicing()
+    # pipe.enable_model_cpu_offload()
 
     # No auxiliary guidance
     pipe.guidance_models = None

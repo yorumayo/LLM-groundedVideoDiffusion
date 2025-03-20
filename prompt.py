@@ -70,8 +70,37 @@ strip_before = required_lines[0]
 stop = "\n\n"
 
 prompts_demo = [
-    "A bear walks from the left to the right",
+    # 单个物体的复杂运动 (Complex Movements of Single Objects)
+    "A fish swims swiftly from the bottom, spiraling upward in a wide helix pattern, then pauses briefly before gliding gently towards the bottom left.",
+    "A basketball bounces from the bottom right corner diagonally upward, hits an imaginary wall, and ricochets toward the left, bouncing gently to a stop near the center.",
+    "An eagle dives from the top, pulls upward in a graceful curve, and ascends again toward the top left corner.",
+    
+    # 多个物体交互的运动 (Interactions Between Multiple Objects)
+    "Two dolphins leap from opposite sides, cross midair at the center, and splash back into the water.",
+    "Two cars race side-by-side upward, then split apart sharply, one veering left and the other right toward the upper corners.",
+    "Two birds fly from opposite directions, circle around each other gracefully, and then depart in separate directions, one ascending and the other descending.",
+
+    # 不规则运动的物体 (Irregular Motion Patterns)
+    "A butterfly flutters erratically from the bottom right, zigzags unpredictably across the screen, then gently floats downward toward the left side.",
+    "A leaf falls slowly from the top left, drifting gently and unpredictably, landing softly at the bottom center.",
+    
+    # 环状运动 (Circular and Looping Motions)
+    "A drone rises from the bottom, flies in two tight circular loops near the top, and then smoothly descends to land at the center bottom.",
+    "A ball rolls from the top center, loops in a circular pattern toward the right, then spirals inward to rest near the center.",
+    
+    # 转向运动 (Sharp Turns and Direction Changes)
+    "A skateboarder glides swiftly from the left, makes a sudden sharp turn at the center, then continues diagonally downward toward the lower right corner.",
+    "A motorcycle accelerates quickly upward from the bottom center, veers sharply left at mid-screen, and exits rapidly toward the upper left.",
+
+    # 涉及远近关系的运动 (Movements Related to Depth and Perspective)
+    "A bird flies from the distance toward the viewer, appearing larger as it approaches the center, then turns sharply and flies back into the distance.",
+    "A soccer ball is kicked from far away at the center top, rapidly approaching closer to the viewer, then slows down and gently rolls to a stop near the bottom.",
+    "An airplane takes off from near the bottom center, gradually shrinking as it ascends into the distance toward the top right.",
+    "A hot air balloon floats gently upward from close range at the bottom left, slowly becoming smaller as it drifts into the distant sky toward the upper right.",
+    "A runner approaches rapidly from far away at the upper left corner, growing larger as they approach the center, then curves sharply to disappear into the distance at the bottom right."
 ]
+
+
 
 prompt_types = ["demo", "lvd"]
 

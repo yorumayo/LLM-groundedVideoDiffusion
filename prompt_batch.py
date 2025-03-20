@@ -65,7 +65,7 @@ if __name__ == "__main__":
 
     # This is for visualizing bounding boxes
     parse.img_dir = (
-        f"img_generations/imgs_{args.prompt_type}_template{template_version}"
+        f"img_generations/imgs_{args.prompt_type}_template{template_version}_{model}"
     )
     if not args.no_visualize:
         os.makedirs(parse.img_dir, exist_ok=True)

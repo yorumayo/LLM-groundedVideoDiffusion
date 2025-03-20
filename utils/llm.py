@@ -20,6 +20,10 @@ model_names = [
     "gpt-3.5",
     "gpt-4",
     "gpt-4-1106-preview",
+    "gpt-4o",
+    "o1",
+    "gpt-4.5",
+    "gpt-4.5-preview",
 ]
 
 

@@ -136,6 +136,7 @@ def show_boxes(
 def show_video_boxes(
     condition,
     figsize=(4, 4),
+    save_path=None,
     ind=None,
     show=False,
     save=False,
@@ -183,18 +184,28 @@ def show_video_boxes(
         display(IPyImage(data=video, format="gif"))
 
     if save:
-        imageio.mimsave(
-            f"{img_dir}/{save_name}.gif",
-            boxes_frames,
-            format="gif",
-            loop=0,
-            duration=1000 * 1 / fps,
-        )
-        if ind is not None:
-            shutil.copy(
-                f"{img_dir}/{save_name}.gif", f"{img_dir}/{save_name}_{ind}.gif"
+        if save_path:
+            imageio.mimsave(
+                f"{save_path}",
+                boxes_frames,
+                format="gif",
+                loop=0,
+                duration=500,
             )
-        print(f'Saved to "{img_dir}/{save_name}.gif"', f"ind: {ind}")
+            print(f'Saved to "{save_path}"')
+        else:
+            imageio.mimsave(
+                f"{img_dir}/{save_name}.gif",
+                boxes_frames,
+                format="gif",
+                loop=0,
+                duration=1000 * 1 / fps,
+            )
+            if ind is not None:
+                shutil.copy(
+                    f"{img_dir}/{save_name}.gif", f"{img_dir}/{save_name}_{ind}.gif"
+                )
+            print(f'Saved to "{img_dir}/{save_name}_{ind}.gif"')
 
     if save_each_frame:
         os.makedirs(f"{img_dir}/{save_name}", exist_ok=True)
